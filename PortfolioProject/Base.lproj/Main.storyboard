@@ -42,16 +42,16 @@
             </objects>
             <point key="canvasLocation" x="1565" y="-257"/>
         </scene>
-        <!--SexGong-->
+        <!--Friends-->
         <scene sceneID="PNj-Yt-5cV">
             <objects>
-                <tableViewController id="OAv-Ai-P8L" sceneMemberID="viewController">
+                <tableViewController title="Friends" id="OAv-Ai-P8L" customClass="FriendsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TRM-hf-XKi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mOx-RV-bFh">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="mOx-RV-bFh">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mOx-RV-bFh" id="WIx-L0-mKa">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -63,11 +63,43 @@
                             <outlet property="delegate" destination="OAv-Ai-P8L" id="eLb-34-bOy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SexGong" id="N8X-n2-CF1"/>
+                    <navigationItem key="navigationItem" title="SexGong" id="N8X-n2-CF1">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="DP9-qW-GOI">
+                            <connections>
+                                <segue destination="1ib-my-Mrb" kind="show" identifier="editFriends" id="fC7-zb-gse"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2NU-pZ-ZdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1565" y="416"/>
+        </scene>
+        <!--Edit FriendsVC-->
+        <scene sceneID="6pw-sz-43a">
+            <objects>
+                <tableViewController id="1ib-my-Mrb" customClass="EditFriendsVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GYm-Xg-w5C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="wLc-3t-gMr">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wLc-3t-gMr" id="ysB-20-Xii">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1ib-my-Mrb" id="AW9-wo-D31"/>
+                            <outlet property="delegate" destination="1ib-my-Mrb" id="GOK-bN-OSd"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8t-kR-Ktn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2287" y="416"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="dRg-Ge-1qZ">
@@ -131,6 +163,12 @@
                                     <constraint firstAttribute="width" constant="255" id="uWz-56-2wi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PuppySnap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-KM-39T">
+                                <rect key="frame" x="159" y="106" width="282" height="54"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -290,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Z5-ae-EBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3002" y="-257"/>
+            <point key="canvasLocation" x="2999" y="-257"/>
         </scene>
         <!--Inbox-->
         <scene sceneID="pCK-zk-Fk1">
