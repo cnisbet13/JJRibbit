@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="2287" y="-257"/>
         </scene>
-        <!--SexGong-->
+        <!--Camera View Controller-->
         <scene sceneID="zcN-WA-dcJ">
             <objects>
-                <tableViewController id="koR-I7-Mh8" sceneMemberID="viewController">
+                <tableViewController id="koR-I7-Mh8" customClass="CameraViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zCP-Db-zlS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,7 +231,7 @@
                             <outlet property="delegate" destination="koR-I7-Mh8" id="5l8-44-Esf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SexGong" id="eU8-19-D6M"/>
+                    <navigationItem key="navigationItem" id="eU8-19-D6M"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKm-47-f3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

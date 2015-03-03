@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		963F61921AA44424006CEBAF /* EditFriendsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 963F61911AA44424006CEBAF /* EditFriendsVC.m */; };
 		963F61951AA44A5F006CEBAF /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 963F61941AA44A5F006CEBAF /* FriendsViewController.m */; };
+		963F61991AA65F09006CEBAF /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 963F61981AA65F09006CEBAF /* CameraViewController.m */; };
 		9673E0171A9C03F800E14281 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9673E0161A9C03F800E14281 /* main.m */; };
 		9673E01A1A9C03F800E14281 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9673E0191A9C03F800E14281 /* AppDelegate.m */; };
 		9673E01D1A9C03F800E14281 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9673E01C1A9C03F800E14281 /* ViewController.m */; };
@@ -58,6 +59,8 @@
 		963F61911AA44424006CEBAF /* EditFriendsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditFriendsVC.m; path = ../EditFriendsVC.m; sourceTree = "<group>"; };
 		963F61931AA44A5F006CEBAF /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		963F61941AA44A5F006CEBAF /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		963F61971AA65F09006CEBAF /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		963F61981AA65F09006CEBAF /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		9673E0111A9C03F800E14281 /* PortfolioProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PortfolioProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9673E0151A9C03F800E14281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9673E0161A9C03F800E14281 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -146,6 +149,17 @@
 			name = "Friends VCs";
 			sourceTree = "<group>";
 		};
+		963F619A1AA6774F006CEBAF /* Login/Sign-Up */ = {
+			isa = PBXGroup;
+			children = (
+				9673E06C1A9C4A6100E14281 /* LoginViewController.h */,
+				9673E06D1A9C4A6100E14281 /* LoginViewController.m */,
+				9673E06F1A9C4A6C00E14281 /* SignUpViewController.h */,
+				9673E0701A9C4A6C00E14281 /* SignUpViewController.m */,
+			);
+			name = "Login/Sign-Up";
+			sourceTree = "<group>";
+		};
 		9673E0081A9C03F800E14281 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +182,7 @@
 		9673E0131A9C03F800E14281 /* PortfolioProject */ = {
 			isa = PBXGroup;
 			children = (
+				963F619A1AA6774F006CEBAF /* Login/Sign-Up */,
 				9673E01E1A9C03F800E14281 /* Main.storyboard */,
 				963F61961AA44A64006CEBAF /* Friends VCs */,
 				9673E0731A9C5A6500E14281 /* Other Files */,
@@ -253,12 +268,10 @@
 		9673E0721A9C5A5700E14281 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				963F61971AA65F09006CEBAF /* CameraViewController.h */,
+				963F61981AA65F09006CEBAF /* CameraViewController.m */,
 				9673E0471A9C34A200E14281 /* InboxViewController.h */,
 				9673E0481A9C34A200E14281 /* InboxViewController.m */,
-				9673E06C1A9C4A6100E14281 /* LoginViewController.h */,
-				9673E06D1A9C4A6100E14281 /* LoginViewController.m */,
-				9673E06F1A9C4A6C00E14281 /* SignUpViewController.h */,
-				9673E0701A9C4A6C00E14281 /* SignUpViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -386,6 +399,7 @@
 				9673E0711A9C4A6C00E14281 /* SignUpViewController.m in Sources */,
 				963F61951AA44A5F006CEBAF /* FriendsViewController.m in Sources */,
 				9673E0171A9C03F800E14281 /* main.m in Sources */,
+				963F61991AA65F09006CEBAF /* CameraViewController.m in Sources */,
 				9673E0491A9C34A200E14281 /* InboxViewController.m in Sources */,
 				9673E06E1A9C4A6100E14281 /* LoginViewController.m in Sources */,
 			);
