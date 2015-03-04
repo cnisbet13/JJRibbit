@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bb1-B3-dHb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -15,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yXg-BV-8xq">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yXg-BV-8xq">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yXg-BV-8xq" id="PDI-3d-wP9">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -36,11 +37,12 @@
                     </navigationItem>
                     <connections>
                         <segue destination="ond-ac-N8F" kind="show" identifier="showLogin" id="eWD-qy-XXt"/>
+                        <segue destination="LXD-zb-h7f" kind="show" identifier="showImage" id="i2p-sQ-Cdy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEJ-wM-EAn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1565" y="-257"/>
+            <point key="canvasLocation" x="1506" y="-269"/>
         </scene>
         <!--Friends-->
         <scene sceneID="PNj-Yt-5cV">
@@ -63,7 +65,7 @@
                             <outlet property="delegate" destination="OAv-Ai-P8L" id="eLb-34-bOy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SexGong" id="N8X-n2-CF1">
+                    <navigationItem key="navigationItem" id="N8X-n2-CF1">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="DP9-qW-GOI">
                             <connections>
                                 <segue destination="1ib-my-Mrb" kind="show" identifier="editFriends" id="fC7-zb-gse"/>
@@ -100,6 +102,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8t-kR-Ktn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2287" y="416"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="LUA-Tz-Ie4">
+            <objects>
+                <viewController id="LXD-zb-h7f" customClass="ImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eAZ-Bl-y0u"/>
+                        <viewControllerLayoutGuide type="bottom" id="qIb-MC-yhS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mef-7c-0YH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vUj-Az-h1l">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="vUj-Az-h1l" id="RXy-kZ-3bK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJN-Un-0Nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2291" y="-925"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="dRg-Ge-1qZ">
@@ -146,8 +174,8 @@
                                     <segue destination="TQG-8m-lAO" kind="show" id="PHS-bh-JiU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNp-NO-5as">
-                                <rect key="frame" x="272" y="264" width="56" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNp-NO-5as">
+                                <rect key="frame" x="273" y="264" width="54" height="38"/>
                                 <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,8 +194,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PuppySnap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-KM-39T">
-                                <rect key="frame" x="159" y="106" width="282" height="54"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PuppySnap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-KM-39T">
+                                <rect key="frame" x="154" y="122" width="292" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4lM-KM-39T" secondAttribute="height" multiplier="47:9" id="zWE-vS-d56"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -175,6 +206,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.56470588239999997" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="4lM-KM-39T" secondAttribute="centerX" id="7k6-AA-lpX"/>
                             <constraint firstAttribute="centerX" secondItem="4bi-Z6-HOf" secondAttribute="centerX" id="AFs-p5-lWE"/>
                             <constraint firstAttribute="centerX" secondItem="zmf-R1-vyv" secondAttribute="centerX" id="DFp-ag-T8V"/>
                             <constraint firstAttribute="centerY" secondItem="zmf-R1-vyv" secondAttribute="centerY" multiplier="1.2" id="E8o-ST-YkB"/>
@@ -183,6 +215,7 @@
                             <constraint firstAttribute="centerY" secondItem="Ido-fT-ZEC" secondAttribute="centerY" multiplier="1.4" id="Qps-Pr-NIr"/>
                             <constraint firstAttribute="centerX" secondItem="Ido-fT-ZEC" secondAttribute="centerX" id="TtX-du-NV7"/>
                             <constraint firstAttribute="centerY" secondItem="VZL-9w-cES" secondAttribute="centerY" multiplier="1.4" constant="-1" id="VqN-kj-8Qy"/>
+                            <constraint firstAttribute="centerY" secondItem="4lM-KM-39T" secondAttribute="centerY" multiplier="2" id="ds4-jA-ICM"/>
                             <constraint firstItem="4bi-Z6-HOf" firstAttribute="leading" secondItem="5BT-oJ-lsB" secondAttribute="leadingMargin" constant="87" id="fAS-Mr-2dQ"/>
                             <constraint firstAttribute="centerY" secondItem="4bi-Z6-HOf" secondAttribute="centerY" multiplier="0.8" constant="15.799999237060547" id="hDj-z9-qOb"/>
                             <constraint firstAttribute="centerX" secondItem="VZL-9w-cES" secondAttribute="centerX" multiplier="0.8" id="jAO-7C-uhr"/>
