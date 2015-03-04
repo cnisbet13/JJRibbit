@@ -219,7 +219,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Lm6-wh-yTX">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Lm6-wh-yTX">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lm6-wh-yTX" id="3bT-eg-T8S">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -231,7 +231,18 @@
                             <outlet property="delegate" destination="koR-I7-Mh8" id="5l8-44-Esf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="eU8-19-D6M"/>
+                    <navigationItem key="navigationItem" id="eU8-19-D6M">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wKm-J6-9IG">
+                            <connections>
+                                <action selector="cancelClicked:" destination="koR-I7-Mh8" id="z2e-QR-6SM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="3aj-rs-K6U">
+                            <connections>
+                                <action selector="sendClicked:" destination="koR-I7-Mh8" id="SzP-pL-AGY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKm-47-f3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
